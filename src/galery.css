@@ -1,0 +1,186 @@
+
+@keyframes slideDown {
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.background {
+  height: 100vh;
+  background: #B0C4DE;
+  color: #ddd;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.cards {
+  display: flex;
+  height: 100vh;
+
+}
+
+
+    /*____________ Detail of responsive ___________ */
+@media (max-width: 850px) { 
+  .cards {
+      flex-direction: column;
+      text-align: center;
+}
+.card {
+  width: 100%!important;
+  
+}
+.rightdown{
+  flex-direction: column;
+}
+
+.rd1, .rd2, .leftbot, .lefttop, .righttop {
+  min-height: 50vh;
+  max-width: 90vw!important;
+}
+
+.leftside {
+
+  width: 100%!important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+} 
+.rightside{
+
+  width: 100%!important;
+}/*
+.paint-gallery{
+  height: 45vh;
+} */
+ }
+
+
+     /*____________ Detail of block ___________ */
+.leftside {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  width: 40vw;
+  
+}
+.rightside{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 60vw;
+}
+.righttop{
+  height: 50vh  ;
+  width: calc(100%  - 20px );
+}
+.rightdown{
+  display: flex;
+  height:  calc(50vh  - 20px );
+  width:100%;
+}
+
+.lefttop {
+  width: calc(100%  - 20px );
+  height: calc(60% - 20px );;
+}
+.leftbot{
+  width: calc(100%  - 20px );
+  height: calc(40% - 20px );
+}
+
+
+/*____________ Detail of card ___________ */
+.card {
+  /* width: 50vw; */
+  margin: 10px;
+  /* border-radius: 35px; */
+  cursor: pointer;
+  max-width: calc(100% - 20px);
+  max-height: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  color: #B0C4DE;
+  padding: 10px;
+  /* border: 3px solid #e25656; */
+  box-shadow: 0 0 9px #4c0505;
+}
+
+/* .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100vw;
+} */
+
+
+
+.card-content {
+  padding: 100px 25px 25px;
+  overflow: auto;
+  color: #fff;
+  text-align: center;
+}
+.card-content > * {
+  transform: translateY(-35px);
+  opacity: 0;
+}
+.card-content h2 {
+  font-size: 32px;
+  margin-bottom: 35px !important;
+  animation: slideDown 0.5s ease-out forwards;
+  
+}
+.card-content img {
+  height: 60vh;
+  /* width: 100%; */
+  background-color: #fff;
+  margin-bottom: 10px;
+  animation: slideDown 0.5s ease-out 0.2s forwards;
+}
+.card-content p {
+  color: #999;
+  animation: slideDown 0.5s ease-out 0.4s forwards;
+}
+
+
+
+
+/* __________ Detail of unity ____________ */
+.paint-gallery{
+background: no-repeat url("./image/paint-gallery.webp");
+background-size: cover;
+background-position: center;
+}
+.luidji{
+  background-image: url("./image/luidji-colors-show.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.scene{
+background: url(./image/scene.jpg);
+background-size: 100%;
+background-position: center;
+}
+
+.rd1{
+  width: calc(30vw - 20px);
+    background: no-repeat url("./image/shop.png");
+background-size: cover;
+background-position: center;
+}
+
+.rd2{
+  width: calc(30vw - 20px);
+    background: no-repeat url("./image/show.jpg");
+background-size: cover;
+background-position: center;
+}
